@@ -1,24 +1,8 @@
 {
     "name": "statink/yii2-bukiicons",
-    "type": "yii2-extension",
-    "license": "MIT",
     "description": "bukiicons asset bundle for stat.ink",
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">= 7.1.0",
-        "yiisoft/yii2": "~2.0.15"
-    },
-    "config": {
-        "process-timeout": 1800,
-        "fxp-asset": {
-            "enabled": false
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "statink\\yii2\\bukiicons\\": "src"
-        }
-    },
+    "license": "MIT",
+    "type": "yii2-extension",
     "authors": [
         {
             "name": "AIZAWA Hina",
@@ -28,14 +12,33 @@
             "name": "stylecase"
         }
     ],
+    "require": {
+        "php": ">= 8.2.0",
+        "yiisoft/yii2": "^2.0.50"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.42"
+    },
     "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packagist.jp"
-        },
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    ]
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "statink\\yii2\\bukiicons\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "yiisoft/yii2-composer": true
+        },
+        "fxp-asset": {
+            "enabled": false
+        },
+        "process-timeout": 1800
+    }
 }
